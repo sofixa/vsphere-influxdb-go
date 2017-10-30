@@ -10,6 +10,8 @@ before_install:
   - dep status
 install:
   - gox
+build:
+  - dep status
 deploy:
   provider: releases
   skip_cleanup: true
