@@ -1,12 +1,19 @@
 language: go
-install: true
 go:
-  - 1.8
+- 1.8
 env:
-  - "PATH=/home/travis/gopath/bin:$PATH"
+- PATH=/home/travis/gopath/bin:$PATH
 before_install:
-  -  go get github.com/mitchellh/gox
+- go get github.com/mitchellh/gox
 script:
-  - go get -t ./...
-  - gox
+- gox
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: T4OUTRoWTjLrAXAel0PRcNFHFzKnH9o7aPJw0DXCFcbsYqka7QMPiNHvZWnDgNfA0uJhuDTaIQ3D/PS0iDpkfy+ouCod3nGShUtKQd95xI+bCuzD3UkMfxLS72bH7zzMABft2Ea8ofHdaKrLGasrGLZer4JRGrf/DO/IKxna3iKMb4ZgYjeqe+M+5k+7xtEBpe8QifppMxVEor+X9LkO34z6rMW8isEA1oTT39pax2ays6CbQgFIHAfU6rUmdNGX706h/RpVxhjleKFQ1v+QVfDgn/ZKCIqA9uoXUBuTelbFJjHKNRyQzRNLmxRoud1uF4oUy1tnhWlllLM49rmU0/WSKsS6m5aEB/afhiioVgbipnQWJ9zdW1zQnmfe2GDS8DMhWzRHVAUYFCUEnrmqQ6K4lJfofBWd7Hh+JTKEmG+cu5lD/cc1bUjEVRNJbbnQCaiY7eXza+NtrOUxo2nFCWCYdrpc7kkXnJNZKIfQ17v5HREIbfflldWvamyWcsFeYL4y3UcBBvb2jSgYil+JBbM7XqC/Nfn+XXmZOjwjDo8F0uXkSIRYWy29xI1VtUY3ccR+J+c+LzcfEn+IwcAkaCC0rfHRgPTQaF7whMKVFdD1KNy+Lc3p+mPjfhPpBmiIn60gK3vZ02OzMXVk1fGihaHWD4rTIUJMzby/ksKDk7Q=
+  file_glob: true
+  file: vsphere-influxdb-go*
+  on:
+    repo: sofixa/vsphere-influxdb-go
 
