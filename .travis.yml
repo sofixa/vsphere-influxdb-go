@@ -20,5 +20,7 @@ deploy:
   file_glob: true
   file: vsphere-influxdb-go*
   on:
+    tags: true
     repo: sofixa/vsphere-influxdb-go
+    all_branches: true
 
