@@ -1,0 +1,38 @@
+project_name: myproject
+builds:
+  - binary: vsphere-influxdb-go
+    goos:
+      - windows
+#      - darwin
+      - linux
+    goarch:
+      - amd64
+fpm:
+  # Your app's vendor.
+  # Default is empty.
+  vendor: Oxalide
+  # Your app's homepage.
+  # Default is empty.
+  homepage: https://github.com/Oxalide/vsphere-influxdb-go
+
+  # Your app's maintainer (probably you).
+  # Default is empty.
+  maintainer: Drummer <drum-roll@example.com>
+
+  # Your app's description.
+  # Default is empty.
+  description: Software to create fast and easy drum rolls.
+
+  # Your app's license.
+  # Default is empty.
+  license: GPL 3.0
+
+  # Formats to be generated.
+  formats:
+    - deb
+    - rpm
+  # Files or directories to add to your package (beyond the binary).
+  # Keys are source paths to get the files from.
+  # Values are the destination locations of the files in the package.
+#  files:
+#    "scripts/etc/init.d/": "/etc/init.d"
