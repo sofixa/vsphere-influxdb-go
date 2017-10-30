@@ -1,12 +1,15 @@
 language: go
 go:
-- 1.8
+  - 1.8
 env:
-- PATH=/home/travis/gopath/bin:$PATH
+  - PATH=/home/travis/gopath/bin:$PATH
 before_install:
-- go get github.com/mitchellh/gox
-script:
-- gox
+  - go get github.com/mitchellh/gox
+  - go get -u github.com/golang/dep/cmd/dep
+  - go get -u github.com/kisielk/errcheck
+  - dep status
+install:
+  - gox
 deploy:
   provider: releases
   skip_cleanup: true
