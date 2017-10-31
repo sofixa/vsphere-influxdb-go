@@ -9,14 +9,13 @@ before_install:
   - sudo apt-get install -y ruby ruby-dev build-essential
   - go get -u github.com/mitchellh/gox
   - go get -u github.com/golang/dep/cmd/dep
-  - go get -u github.com/kisielk/errcheck
   - go get -u github.com/alecthomas/gometalinter
 install:
   - dep ensure
 before_script:
-  - gometalinter --vendor ./...
-  - go tool vet *.go
-#  - errcheck ./...
+  - gometalinter --install
+  - gometalinter ./...
+    #  - go tool vet *.go
 script:
   - gox -osarch="linux/amd64"
 after_success:
