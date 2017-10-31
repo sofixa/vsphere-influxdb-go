@@ -17,7 +17,8 @@ before_script:
     #  - gometalinter --vendor ./...
     #  - go tool vet *.go
 script:
-  - gox -osarch="linux/amd64"
+  - git status
+        #  - gox -osarch="linux/amd64"
 after_success:
   - gem install --no-ri --no-rdoc fpm
   - test -n "$TRAVIS_TAG" && curl -sL https://git.io/goreleaser | bash
