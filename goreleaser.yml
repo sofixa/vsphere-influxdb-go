@@ -1,4 +1,4 @@
-project_name: myproject
+project_name: vsphere-influxdb-go
 builds:
   - binary: vsphere-influxdb-go
     goos:
@@ -7,6 +7,10 @@ builds:
       - linux
     goarch:
       - amd64
+archive:
+  format: tar.gz
+#  files:
+#    - drum-roll.licence.txt
 fpm:
   # Your app's vendor.
   # Default is empty.
