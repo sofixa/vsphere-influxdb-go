@@ -14,7 +14,7 @@ install:
   - dep ensure
 before_script:
   - gometalinter --install
-  - gometalinter ./...
+  - gometalinter --vendor ./...
     #  - go tool vet *.go
 script:
   - gox -osarch="linux/amd64"
