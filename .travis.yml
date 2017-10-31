@@ -6,7 +6,7 @@ env:
   - PATH=/home/travis/gopath/bin:$PATH
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y ruby ruby-dev build-essential
+  - sudo apt-get install -y ruby ruby-dev build-essential rpm 
   - go get -u github.com/mitchellh/gox
   - go get -u github.com/golang/dep/cmd/dep
   - go get -u github.com/alecthomas/gometalinter
@@ -32,6 +32,8 @@ deploy:
     - dist/*/*
     - dist/*.deb
     - dist/*.rpm
+    - dist/*.tar.gz
+    - dist/*.checksums.txt
   on:
     tags: true
     repo: sofixa/vsphere-influxdb-go
