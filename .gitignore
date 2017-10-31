@@ -11,3 +11,5 @@ vsphere-influxdb
 
 # Configuration file
 vsphere-influxdb.json
+
+dist/
