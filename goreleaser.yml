@@ -21,11 +21,11 @@ fpm:
 
   # Your app's maintainer (probably you).
   # Default is empty.
-  maintainer: Drummer <drum-roll@example.com>
+  maintainer: Adrian Todorov <ato@oxalide.com>
 
   # Your app's description.
   # Default is empty.
-  description: Software to create fast and easy drum rolls.
+  description: Collect VMware vSphere, vCenter and ESXi performance metrics and send them to InfluxDB
 
   # Your app's license.
   # Default is empty.
@@ -38,5 +38,5 @@ fpm:
   # Files or directories to add to your package (beyond the binary).
   # Keys are source paths to get the files from.
   # Values are the destination locations of the files in the package.
-#  files:
-#    "scripts/etc/init.d/": "/etc/init.d"
+  files:
+    "vsphere-influxdb.json.sample": "/etc/vsphere-influxdb-go.json"
