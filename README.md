@@ -1,4 +1,4 @@
-[![Go Report Card](https://goreportcard.com/badge/Oxalide/vsphere-influxdb-go)](https://goreportcard.com/report/github.com/Oxalide/vsphere-influxdb-go)
+[![Build Status](https://travis-ci.org/sofixa/vsphere-influxdb-go.svg?branch=master)](https://travis-ci.org/sofixa/vsphere-influxdb-go) [![Go Report Card](https://goreportcard.com/badge/Oxalide/vsphere-influxdb-go)](https://goreportcard.com/report/github.com/Oxalide/vsphere-influxdb-go) 
 
 # Collect VMware vSphere, vCenter and ESXi performance metrics and send them to InfluxDB
 
