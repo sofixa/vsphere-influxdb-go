@@ -9,26 +9,23 @@ builds:
       - amd64
 archive:
   format: tar.gz
-#  files:
-#    - drum-roll.licence.txt
+  files:
+    - LICENSE.txt
+    - README.md
 fpm:
   # Your app's vendor.
   # Default is empty.
   vendor: Oxalide
   # Your app's homepage.
-  # Default is empty.
   homepage: https://github.com/Oxalide/vsphere-influxdb-go
 
   # Your app's maintainer (probably you).
-  # Default is empty.
   maintainer: Adrian Todorov <ato@oxalide.com>
 
   # Your app's description.
-  # Default is empty.
   description: Collect VMware vSphere, vCenter and ESXi performance metrics and send them to InfluxDB
 
   # Your app's license.
-  # Default is empty.
   license: GPL 3.0
 
   # Formats to be generated.
@@ -40,3 +37,4 @@ fpm:
   # Values are the destination locations of the files in the package.
   files:
     "vsphere-influxdb.json.sample": "/etc/vsphere-influxdb-go.json"
+    
