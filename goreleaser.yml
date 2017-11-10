@@ -3,7 +3,7 @@ builds:
   - binary: vsphere-influxdb-go
     goos:
       - windows
-#      - darwin
+      - darwin
       - linux
     goarch:
       - amd64
