@@ -5,8 +5,15 @@ builds:
       - windows
       - darwin
       - linux
+      - freebsd
     goarch:
       - amd64
+      - arm
+      - arm64
+    goarm:
+      - 6
+      - 7
+
 archive:
   format: tar.gz
   files:
