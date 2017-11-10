@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sofixa/vsphere-influxdb-go.svg?branch=master)](https://travis-ci.org/sofixa/vsphere-influxdb-go) [![Go Report Card](https://goreportcard.com/badge/Oxalide/vsphere-influxdb-go)](https://goreportcard.com/report/github.com/Oxalide/vsphere-influxdb-go) [![Releases](https://img.shields.io/github/release/sofixa/vsphere-influxdb-go.svg?style=flat-square)](https://github.com/sofixa/vsphere-influxdb-go/releases/latest)
+[![Releases](https://img.shields.io/github/release/sofixa/vsphere-influxdb-go.svg?style=flat-square)](https://github.com/sofixa/vsphere-influxdb-go/releases/latest) [![Build Status](https://travis-ci.org/sofixa/vsphere-influxdb-go.svg?branch=master)](https://travis-ci.org/sofixa/vsphere-influxdb-go) [![Go Report Card](https://goreportcard.com/badge/Oxalide/vsphere-influxdb-go)](https://goreportcard.com/report/github.com/Oxalide/vsphere-influxdb-go)
 
 # Collect VMware vCenter and ESXi performance metrics and send them to InfluxDB
 
@@ -57,8 +57,6 @@ If you set a domain, it will be automaticaly removed from the names of the found
 
 Metrics collected are defined by associating ObjectType groups with Metric groups.
 
-**Note: Not all metrics are available directly, you might need to change your metric collection level.**
-A table with the level needed for each metric is availble [here](http://www.virten.net/2015/05/which-performance-counters-are-available-in-each-statistic-level/), and you can find a python script to change the collect level in the [tools folder of the project](./tools/).
 
 # Run as a service
 
